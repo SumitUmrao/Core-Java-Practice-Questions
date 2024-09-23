@@ -1,1 +1,42 @@
+// Take A randon number and Tell to user to guess correct Number and show The correct Number
+
+
+
+
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        int randomNumber = (int) (Math.random()*100);
+
+
+        int  userInput;
+
+        do{
+            System.out.print("Guess the number:");
+            userInput = sc.nextInt();
+
+            if(randomNumber == userInput){
+                System.out.println("Woooooooo Your Guess Is Correct");
+                break;
+            }
+            else if(randomNumber > userInput){
+                System.out.println(" Your Guess Is Less ");
+            }
+            else {
+                System.out.println("Your Guess Is Large");
+            }
+
+        }while (userInput >= 0);
+
+        System.out.println("My Number Was :"+ randomNumber);
+    }
+}
+
+
+
+
+
 
